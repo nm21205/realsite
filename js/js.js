@@ -29,17 +29,14 @@ function openDaumPostcode(type) {
   }
 
   function openDaumMap() {
-    var startAddress = document.getElementById('txtStartAddress1').value;
-    var endAddress = document.getElementById('txtEndAddress1').value;
+    // 데스크톱 사용자 에이전트로 새 창을 엽니다.
+    const mapWindow = window.open('', '_blank');
+    mapWindow.navigator.__defineGetter__('userAgent', function(){
+        return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3';
+    });
 
-    if (!startAddress || !endAddress) {
-      alert('출발지와 도착지 주소를 모두 입력하세요.');
-      return;
-    }
-
-    // 다음 지도 웹 페이지를 새 창으로 엽니다.
-    var daumMapUrl = `https://map.kakao.com/?sName=${encodeURIComponent(startAddress)}&eName=${encodeURIComponent(endAddress)}`;
-    window.open(daumMapUrl, '_blank');
+    // 다음 지도 URL을 로드합니다.
+    mapWindow.location.href = 'https://map.kakao.com/';
   }
 
   function calculatePrice() {
