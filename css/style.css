@@ -334,6 +334,10 @@ padding: 40px;
 
 /* 모바일 스타일 */
 @media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
   .header-nav {
     flex-direction: column;
     align-items: center;
@@ -384,8 +388,6 @@ padding: 40px;
     }
     
   }
-
-
 
   .main-content, .exp-content, .service-section, .price-section {
     padding: 20px;

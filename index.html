@@ -71,26 +71,27 @@
     </ul>
   </section>
 
-  <section class="price-section" id="priceSection">
+  <div class="price-section" id="priceSection">
     <h2>주소 검색 및 거리 측정</h2>
-    <p>출발지와 도착지의 주소를 입력하여 차량이동 거리를 확인하시고, 거리를 직접 입력하여 가격을 계산해보세요.</p>
+    <p>출발지와 도착지의 주소를 입력하여 차량이동 거리를 확인하시고, 거리를 입력하여 가격을 계산해보세요.</p>
     <p>현재 가격은 1톤 차량 기준으로, 차량의 종류 및, 상황에 따라<br> 가격이 다르오니 참고하세요.</p>
-    <div>
+     <p>*모바일 버전에서는 거리 입력만 가능 합니다.</p>
+    <div class="desktop-only">
       <label for="txtStartAddress1">출발지 주소:</label>
       <input type="text" id="txtStartAddress1" placeholder="출발지 주소 입력" onclick="openDaumPostcode('start')">
     </div>
-    <div>
+    <div class="desktop-only">
       <label for="txtEndAddress1">도착지 주소:</label>
       <input type="text" id="txtEndAddress1" placeholder="도착지 주소 입력" onclick="openDaumPostcode('end')">
     </div>
-    <button id="calculateDistanceBtn" onclick="openDaumMap()">거리 측정</button>
+    <button id="calculateDistanceBtn" class="desktop-only" onclick="openDaumMap()">거리 측정</button>
     <div>
       <label for="manualDistance">직접 입력 거리 (km):</label>
       <input type="number" id="manualDistance" placeholder="거리를 입력하세요">
     </div>
     <button id="calculatePriceBtn" onclick="calculatePrice()">가격 계산</button>
     <div id="priceResult">예상 가격: <span id="estimatedPrice">0</span> 원</div>
-  </section>
+  </div>
   <footer>  
     <ul>
       <li>대신탁송 서비스</li>
