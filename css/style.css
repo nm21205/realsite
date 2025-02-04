@@ -112,7 +112,6 @@ ul, li{
 
   .exp{
     color: rgb(0, 0, 0);
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
     font-size: 30px;
     font-weight: bold;
     margin-top: 100px;
@@ -383,6 +382,7 @@ padding: 40px;
     li{
       font-size: 15px;
     }
+    
   }
 
 
@@ -392,6 +392,9 @@ padding: 40px;
     width: 100%;
     box-sizing: border-box;
     font-size: 10px;
+    .exp-em{
+      font-size: 17px;
+    }
   }
 
   .service-section{
