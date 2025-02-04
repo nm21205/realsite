@@ -111,7 +111,8 @@ ul, li{
   height: 1000px;
 
   .exp{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
     font-size: 30px;
     font-weight: bold;
     margin-top: 100px;
@@ -122,7 +123,7 @@ ul, li{
     margin-bottom: 50px;
     .exp-item{
       font-weight: bold;
-      font-size: 20px;
+      font-size: 30px;
       
     }
     display: flex;
@@ -134,7 +135,7 @@ ul, li{
     }
   }
   .exp-em{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     margin-bottom: 100px;
@@ -154,6 +155,7 @@ ul, li{
   background-repeat: no-repeat;
   filter: blur(3px); /* 원하는 흐림 정도로 설정 */
   z-index: -1;
+  opacity: 0.8;
 
   }
 
