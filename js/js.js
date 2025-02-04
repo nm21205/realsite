@@ -51,6 +51,9 @@ function openDaumPostcode(type) {
     var pricePerKm = 555;
     var estimatedPrice = distance * pricePerKm;
 
+    // 소수점 올림 처리
+    estimatedPrice = Math.ceil(estimatedPrice);
+
     document.getElementById('estimatedPrice').innerText = estimatedPrice.toLocaleString();
   }
 
