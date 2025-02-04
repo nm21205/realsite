@@ -72,6 +72,11 @@ function changeBorderColor() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  // 카카오톡 인앱 브라우저 감지
+  if (navigator.userAgent.includes('KAKAOTALK')) {
+    alert('이 페이지는 크롬에서 최적화되어 있습니다. 크롬으로 열어주세요.');
+  }
+
   document.querySelectorAll('.nav-item').forEach(function(item) {
     item.addEventListener('click', function() {
       var targetId = this.getAttribute('data-target');
